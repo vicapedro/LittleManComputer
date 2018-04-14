@@ -1,7 +1,7 @@
 # Little Man Computer
 ## A LMC implementation in Java
-To do
+### To do
 
--Add ability to input programs
--Add ability to store programs as files
--Add user interface
+- Add ability to input programs
+- Add ability to store programs as files
+- Add user interface
