@@ -1,2 +1,3 @@
 # LittleManComputer
-little man computer in java
+A LMC implementation in Java
+
