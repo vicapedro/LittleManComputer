@@ -35,7 +35,7 @@ public class LittleManComputer
 	}
 	
 	
-	
+	// Prints out the memory array
 	public void outputMemory()
 	{
 		for(int i=0;i < memory.length;i++)
@@ -49,13 +49,13 @@ public class LittleManComputer
 	{
 		outputMemory();
 		System.out.println("Running LMC");
-		while(true)
+		while(true) // Runs through the instructions 
 		{
-		int instruction = memory[programCounter];	//fetching
+		int instruction = memory[programCounter];	//fetching instructions using the program counter
 		
-		programCounter++;
-		instructionRegister = Integer.parseInt(Integer.toString(instruction).substring(0, 1));// gets first character (as instruction)
-		addressRegister = instruction - (instructionRegister*100);
+		programCounter++; //Moves to the next instruction
+		instructionRegister = Integer.parseInt(Integer.toString(instruction).substring(0, 1));// This value refers to the intstruction
+		addressRegister = instruction - (instructionRegister*100); //This value refers to the address the instruction will be performed on
 		if(instruction==0)
 		{
 			break;
@@ -107,7 +107,6 @@ public class LittleManComputer
 	void add()
 	{
 		accumulator  = accumulator + memory[addressRegister];	
-		
 	}
 	void sub()
 	{
@@ -115,7 +114,7 @@ public class LittleManComputer
 	}
 	void brp()
 	{
-		if(memory[addressRegister] > 0)
+		if(accumulator > 0)  // If memory in the accumulator is greater than 0 , branch
 		{
 			bra();
 		}
@@ -123,13 +122,13 @@ public class LittleManComputer
 	
 	void brz()
 	{
-		if(memory[addressRegister] == 0)
+		if(accumulator == 0)
 		{
 			bra();
 		}
 	}
 	
-	void bra()
+	void bra() //Changes the program counter to the branch address , allowing to redirect to other parts of code.
 	{
 		programCounter = addressRegister;
 	}
