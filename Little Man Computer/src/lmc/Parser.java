@@ -2,7 +2,7 @@ package lmc;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class Parser {
-	public String[] instructionList = {"ADD","SUB","STA","SKIP","LDA","BRA","BRZ","BRP"};
+	public String[] instructionList = {"ADD","SUB","STA","SKIP","LDA","BRA","BRZ","BRP","INP","OUT"};
 	public Parser()
 	{
 		
@@ -26,31 +26,17 @@ public class Parser {
 			
 			if(m.find())
 			{	
+				if(instructionList[i] == "INP")
+				{
+					instruction = 901;
+				}
+				else if(instructionList[i] == "OUT")
+				{
+					instruction = 902;
+				}
 				instruction = Integer.parseInt(String.valueOf(i + 1) + m.group(2));	
 			}
 		}
-		
-		
-		Matcher IOMatcher;
-		Pattern inp = Pattern.compile("(INP)");
-		IOMatcher = inp.matcher(str);
-		
-		if(IOMatcher.find())
-		{
-			String instructionAddString = "9";
-			instructionAddString += "01";
-			instruction = Integer.parseInt(instructionAddString);
-		}
-		Pattern out = Pattern.compile("(OUT)");
-		IOMatcher = out.matcher(str);
-		
-		if(IOMatcher.find())
-		{
-			String instructionAddString = "9";
-			instructionAddString += "02";
-			instruction = Integer.parseInt(instructionAddString);
-		}
-				
 		return instruction;
 	}
 
