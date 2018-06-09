@@ -6,7 +6,7 @@ The Little Man Computer (LMC) is an instructional model of a computer, created b
 
 The original concept was that inside the CPU is a tiny man who runs around executing instructions encoded in a list. Inside the CPU there are:
 
-100 Memory locations (numbered 0 to 99).
+- 100 Memory locations (numbered 0 to 99).
 - An Arithmetic Unit to do calculations.
 - An Accumulator to store the result of the last operation or calculation.
 - A Program Counter to store the address (in memory) of the next instruction to do.
