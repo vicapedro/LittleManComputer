@@ -2,7 +2,7 @@
 ## A LMC implementation in Java
 
 
-The Little Man Computer (LMC) is an instructional model of a computer, created by Dr. Stuart Madnick in 1965. It models the architecture of a simple computer and has all the basic features. See en.wikipedia.org/wiki/Little_man_computer for more information.
+The Little Man Computer (LMC) is an instructional model of a computer, created by Dr. Stuart Madnick in 1965. It models the architecture of a simple computer and has all the basic features. See https://en.wikipedia.org/wiki/Little_man_computer for more information.
 
 The original concept was that inside the CPU is a tiny man who runs around executing instructions encoded in a list. Inside the CPU there are:
 
