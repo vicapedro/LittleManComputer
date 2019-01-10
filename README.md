@@ -14,3 +14,6 @@ The original concept was that inside the CPU is a tiny man who runs around execu
 - An Address Register to hold the bottom two digits of the instruction read from memory.
 - An Input tray into which a number can be typed when needed.
 - An Output area where any numbers output are printed.
+
+Technologies
+- Java
